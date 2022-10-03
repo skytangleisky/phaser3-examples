@@ -155,10 +155,10 @@ body {
     right: 15px;
 }
 
-#breadcrumb a {
-    text-transform: capitalize;
-    color: white;
-}
+#breadcrumb a:link{color:yellow;text-transform: capitalize;} /* 未访问的链接 */
+#breadcrumb a:visited {color:red;text-transform: capitalize;} /* 已访问的链接 */
+#breadcrumb a:hover{color:white;text-transform: capitalize;} /* 鼠标划过链接 */
+#breadcrumb a:active{color:green;text-transform: capitalize;} /* 已选中的链接 */
 
 .result {
     clear: both;
@@ -178,7 +178,6 @@ body {
     border-radius: 4px;
     position: absolute;
     top: 35px;
-    right: -60px;
     z-index: 3;
     max-height: 492px;
     overflow: auto;

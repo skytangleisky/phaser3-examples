@@ -259,7 +259,7 @@ PHASER.search = (function(){
                 clickedInSearch = $searchContainer.length > 0;
 
             if(!clickedInSearch){
-                $("#search-results").hide();
+                // $("#search-results").hide();
             }
         });
     }

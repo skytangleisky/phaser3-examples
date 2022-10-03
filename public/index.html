@@ -242,7 +242,7 @@
         }
         else
         {
-            var a = $('<a></a>', { href: 'view.html?src=' + filepath + '&rnd=' + Math.random().toString() });
+            var a = $('<a></a>', { href: 'view.html?src=' + filepath + '&rnd=' + Math.random().toString(), target: '_blank' });
         }
 
         const imgPath = filepath.replace(/^src/, 'screenshots').replace(/\.json$/, '.png').replace(/\.js$/, '.png');
@@ -259,7 +259,7 @@
 
         var p = $('<p></p>').addClass('card-text');
 
-        p.append($('<a></a>', { href: 'edit.html?src=' + filepath }).text(filename.replace('.js', '')));
+        p.append($('<a></a>', { href: 'edit.html?src=' + filepath, target: '_blank' }).text(filename.replace('.js', '')));
 
         div.append(a).append(p);
 
@@ -391,11 +391,11 @@
      -->
     <script type="text/template" id="result-row-template">
         <div class="result">
-            <a href="{{fullPath}}">
+            <a href="{{fullPath}}" target="_blank">
                 {{title}}
 
             </a>
-            <a href="?dir={{path}}" class="path">
+            <a href="?dir={{path}}" class="path" target="_blank">
                 {{path}}
             </a>
         </div>
